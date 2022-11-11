@@ -9,8 +9,8 @@ const todatTemp = document.querySelector('.temp')
 const userLocation = document.querySelector('.location')
 const min = document.querySelector('.min')
 const max = document.querySelector('.max')
-const userCountry = document.querySelector('.country')
 const weatherDescription = document.querySelector('.description')
+const place = document.querySelector('.place')
 
 // get user location and fetch data then desplay it
 userLocation.addEventListener('click', () => {
@@ -28,16 +28,16 @@ userLocation.addEventListener('click', () => {
         const { icon } = data.weather[0]
         weatherIcon.src = `./icons/${icon}.png`
 
+        place.textContent = `Place: ${data.name} `
+
         const { temp } = data.main
-        todatTemp.textContent = `tempurature: ${temp} `
+        todatTemp.textContent = `temperature: ${temp} `
         let { temp_min } = data.main
         let { temp_max } = data.main
 
         min.textContent = `temp_min: ${temp_min}`
         max.textContent = `temp_max: ${temp_max}`
-        let { country } = data.sys
         let { description } = data.weather[0]
-        userCountry.textContent = `country code: ${country} `
         weatherDescription.textContent = `description: ${description} `
       })
   })
