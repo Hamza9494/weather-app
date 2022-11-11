@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  background-image: linear-gradient(
+    to right,
+    #050537,
+    #071a5f,
+    #0f2c8b,
+    #133fba,
+    #1254eb
+  );
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+.weather-icon {
+  color: white;
+}
+.container {
+  width: 90vw;
+  max-width: 800px;
+  margin: 15rem auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.hide {
+  display: none;
+}
+button {
+  background-color: #00c9b7;
+  border: 1px solid transparent;
+  color: white;
+  display: block;
+  width: 200px;
+  margin: 2rem auto;
+  border-radius: 50px;
+  text-transform: capitalize;
+  letter-spacing: 0.75px;
+  font-size: 18px;
+  padding: 1rem;
+  cursor: pointer;
+}
